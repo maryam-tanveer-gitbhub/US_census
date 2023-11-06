@@ -1,0 +1,8 @@
+import pandas as pd
+
+df = pd.read_csv('/Users/maryamtanveer/Desktop/output.csv',)
+new_headers = df.iloc[0]
+df.columns = new_headers
+df = df.drop(0)
+print(list(df.columns))
+df.to_csv('/Users/maryamtanveer/Desktop/output2.csv', index=False)
